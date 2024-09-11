@@ -1,3 +1,5 @@
+package v1;
+
 import java.util.Random;
 
 
@@ -53,7 +55,6 @@ public class Principal  extends Thread{
 	//vector de forma paralela
 	private static void vec_concurrente(){
 		int nproc = Runtime.getRuntime().availableProcessors(); //Devuelve cuantos nucleos tiene la CPU
-		System.out.println("nucleos disponibles: "+nproc);
 		int inicio = 0, fin = 0;
 		Principal[] prin = new Principal[nproc];
 		
