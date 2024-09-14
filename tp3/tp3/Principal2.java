@@ -30,8 +30,8 @@ public class Principal2 {
 	}
 	
 	public static void main(String[] args) {
-		int filas= 10;
-		int columnas=20;
+		int filas= 100;
+		int columnas=200;
 		int[][] a = new int[filas][columnas];
 		int[][] b = new int[columnas][filas];
 		Random random =new Random();
