@@ -1,4 +1,4 @@
-package punto2;
+package tp4.tp4.punto2;
 
 import java.util.Queue;
 
