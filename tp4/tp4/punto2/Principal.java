@@ -13,7 +13,7 @@ public class Principal {
         while(true) {  
 
             try {
-                Thread.sleep(panaderia.getRandomInt(800, 1501));
+                Thread.sleep(panaderia.getRandomInt(800, 1500));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

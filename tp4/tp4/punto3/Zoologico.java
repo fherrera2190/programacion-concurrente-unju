@@ -1,4 +1,5 @@
 package tp4.tp4.punto3;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
@@ -9,8 +10,11 @@ class Zoologico {
     private final Random random = new Random();  
 
     public synchronized void hacerFilaParaEntrar(int id) {
+    	
+    	
         colaEntrada.add(id);  
         System.out.println("Cliente " + id + " esta en la fila para entrar.");
+
         try {
         	while (pasilloOcupado || colaEntrada.peek() != id) {
         		wait();  
@@ -24,7 +28,7 @@ class Zoologico {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}  
-        System.out.println("Cliente " + id + " ha entrado al zoologico.");
+
         
         pasilloOcupado = false;  
         notifyAll(); 
@@ -32,7 +36,7 @@ class Zoologico {
 
     public synchronized void hacerFilaParaSalir(int id) {
         colaSalida.add(id); 
-        System.out.println("Cliente " + id + " está en la fila para salir.");
+        System.out.println("Cliente " + id + " esta en la fila para salir.");
 
         try {
         	while (pasilloOcupado || colaSalida.peek() != id) {

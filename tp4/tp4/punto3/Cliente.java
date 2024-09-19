@@ -1,8 +1,8 @@
 package tp4.tp4.punto3;
 
 class Cliente extends Thread {
-    private  int id;
-    private  Zoologico zoologico;
+    private final int id;
+    private final Zoologico zoologico;
 
     public Cliente(int id, Zoologico zoologico) {
         this.id = id;
@@ -12,11 +12,11 @@ class Cliente extends Thread {
     public void run() {
         try {
             //Entrada
-
             Thread.sleep(zoologico.getRandomInt(100, 201));
             zoologico.hacerFilaParaEntrar(id);
 
             //Recorriendo zoologico
+            System.out.println("Cliente " + id + " esta recorriendo el zoologico.");
             Thread.sleep(zoologico.getRandomInt(400, 701));
             System.out.println("Cliente " + id + " termino de recorrer zoologico.");
             //Salida
