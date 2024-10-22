@@ -8,8 +8,10 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Runnable task1=()->{ClaseMetodos.task1();};
-		Runnable task2=()->{ClaseMetodos.task2();};
+		
+		ClaseMetodos claseMetodos = new ClaseMetodos();
+		Runnable task1=()->{claseMetodos.task1();};
+		Runnable task2=()->{claseMetodos.task2();};
         ScheduledExecutorService ses = Executors.newScheduledThreadPool(2);
 
 		ses.scheduleAtFixedRate(task1, 2, 2, TimeUnit.SECONDS);
