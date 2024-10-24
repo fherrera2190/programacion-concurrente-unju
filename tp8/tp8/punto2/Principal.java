@@ -15,7 +15,7 @@ public class Principal {
         ScheduledExecutorService ses = Executors.newScheduledThreadPool(2);
 
 		ses.scheduleAtFixedRate(task1, 2, 2, TimeUnit.SECONDS);
-		ses.scheduleAtFixedRate(task2, 2, 2, TimeUnit.SECONDS);
+		ses.scheduleAtFixedRate(task2, 2,2, TimeUnit.SECONDS);
 
 	}
 

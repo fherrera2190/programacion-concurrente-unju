@@ -24,7 +24,7 @@ public class ClaseMetodos {
 		LocalTime currentTime = LocalTime.now();
 		String formattedTime = currentTime.format(formatter);
 		addToList(formattedTime);
-
+		System.out.println(this.list);
 	}
 
 	public void task2() {

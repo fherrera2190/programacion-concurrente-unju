@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class TaskCheckFolder {
 
 	LinkedList<String> list = new LinkedList<>();
-	
+
 	public TaskCheckFolder() {
 		File[] listOfFiles = this.readFiles();
 
@@ -15,6 +15,7 @@ public class TaskCheckFolder {
 		}
 
 	}
+
 	public void showList() {
 		System.out.println(this.list);
 	}
@@ -30,11 +31,16 @@ public class TaskCheckFolder {
 		if (list.size() < listOfFiles.length) {
 			for (File file : listOfFiles) {
 				if (!list.contains(file.getName())) {
-					System.out.println("Nuevo archivo " + file.getName() + ", con tamaño " + file.length());
+					this.showMessage(file);
 					this.list.add(file.getName());
 				}
 			}
 			this.showList();
 		}
 	}
+
+	void showMessage(File file) {
+		System.out.println("Nuevo archivo " + file.getName() + ", con tamaño " + file.length());
+	}
+
 }
